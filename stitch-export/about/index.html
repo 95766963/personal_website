@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - Stone's Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1b1c",
+                        "on-secondary": "#002e6a",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-dim": "#131314",
+                        "inverse-surface": "#e5e2e3",
+                        "on-secondary-container": "#e6ecff",
+                        "surface-container": "#201f20",
+                        "surface-bright": "#3a393a",
+                        "on-tertiary-fixed-variant": "#6b3b00",
+                        "on-background": "#e5e2e3",
+                        "text-secondary": "#A1A1AA",
+                        "on-tertiary-container": "#744000",
+                        "on-tertiary": "#4b2800",
+                        "surface": "#131314",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-elevated": "#111113",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-variant": "#353436",
+                        "primary-fixed-dim": "#3cddc7",
+                        "border-low": "#1E1E21",
+                        "tertiary": "#ffd1aa",
+                        "on-primary-fixed": "#00201c",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#62fae3",
+                        "text-primary": "#F5F5F5",
+                        "primary": "#57f1db",
+                        "on-secondary-fixed": "#001a42",
+                        "tertiary-container": "#ffac5a",
+                        "on-primary-container": "#00574d",
+                        "on-primary-fixed-variant": "#005047",
+                        "background": "#131314",
+                        "surface-tint": "#3cddc7",
+                        "on-primary": "#003731",
+                        "outline-variant": "#3c4a46",
+                        "outline": "#859490",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#adc6ff",
+                        "secondary-container": "#0566d9",
+                        "on-surface-variant": "#bacac5",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed-dim": "#ffb875",
+                        "accent-glow": "rgba(45, 212, 191, 0.15)",
+                        "on-surface": "#e5e2e3",
+                        "inverse-primary": "#006b5f",
+                        "inverse-on-surface": "#313031",
+                        "surface-container-highest": "#353436",
+                        "tertiary-fixed": "#ffdcc0",
+                        "surface-container-high": "#2a2a2b",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0f",
+                        "primary-container": "#2dd4bf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "terminal-small": ["JetBrains Mono"],
+                        "technical-label": ["JetBrains Mono"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "terminal-small": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "technical-label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .blueprint-bg {
+            background-image: linear-gradient(#1e1e21 1px, transparent 1px), linear-gradient(90deg, #1e1e21 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-color: #0A0A0B;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        /* Coordinate Markers */
+        .coord-marker {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            pointer-events: none;
+        }
+        .coord-tl { top: -4px; left: -4px; border-top: 1px solid #2DD4BF; border-left: 1px solid #2DD4BF; }
+        .coord-tr { top: -4px; right: -4px; border-top: 1px solid #2DD4BF; border-right: 1px solid #2DD4BF; }
+        .coord-bl { bottom: -4px; left: -4px; border-bottom: 1px solid #2DD4BF; border-left: 1px solid #2DD4BF; }
+        .coord-br { bottom: -4px; right: -4px; border-bottom: 1px solid #2DD4BF; border-right: 1px solid #2DD4BF; }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 2px;
+            background: #2DD4BF;
+            z-index: 100;
+            transition: height 0.1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Blueprint Grid Overlay -->
+<div class="fixed inset-0 blueprint-bg pointer-events-none"></div>
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress" style="height: 0%;"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border-low transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-full mx-auto">
+<a class="font-display-lg text-headline-md font-bold text-primary" href="#">S.</a>
+<div class="hidden md:flex space-x-8">
+<a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">> Home</a>
+<a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">> Projects</a>
+<a class="font-technical-label text-technical-label text-primary border-b-2 border-primary pb-1" href="#">> About</a>
+<a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">> Contact</a>
+</div>
+<!-- Mobile Menu Button (Placeholder) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-[100px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Opening Section -->
+<section class="py-24 relative">
+<div class="font-terminal-small text-terminal-small text-primary mb-4 tracking-widest">// IDENTITY</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary max-w-4xl">
+                I'm Stone, a full-stack developer and AI application engineer based in Vancouver.
+            </h1>
+</section>
+<!-- Story Section -->
+<section class="py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<div class="md:col-span-4 font-terminal-small text-terminal-small text-primary mb-8 md:mb-0">
+<span>[ STORY ]</span>
+</div>
+<div class="md:col-span-8 space-y-8">
+<div class="p-8 bg-surface-elevated border border-border-low relative hover-glow transition-all duration-300">
+<div class="coord-marker coord-tl"></div>
+<div class="coord-marker coord-tr"></div>
+<div class="coord-marker coord-bl"></div>
+<div class="coord-marker coord-br"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        After graduating from Simon Fraser University with [EXACT DEGREE NAME] in [GRADUATION YEAR], I built and operated a computer business...
+                    </p>
+<div class="mt-6 pt-6 border-t border-border-low flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-technical-label text-technical-label text-text-primary">Based in Vancouver and authorized to work in Canada.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Section -->
+<section class="py-section-gap relative">
+<div class="font-terminal-small text-terminal-small text-primary mb-12">
+<span>[ CAPABILITIES ]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Frontend -->
+<div class="p-6 bg-surface-elevated border border-border-low relative hover-glow transition-all duration-300 group">
+<div class="coord-marker coord-tl"></div>
+<div class="font-technical-label text-technical-label text-primary mb-4 border-b border-border-low pb-2 group-hover:border-primary transition-colors">SYS.FRONTEND</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li>React / Next.js</li>
+<li>TypeScript</li>
+<li>Tailwind CSS</li>
+<li>Framer Motion</li>
+<li>WebGL / Three.js Basics</li>
+</ul>
+</div>
+<!-- Backend -->
+<div class="p-6 bg-surface-elevated border border-border-low relative hover-glow transition-all duration-300 group">
+<div class="coord-marker coord-tr"></div>
+<div class="font-technical-label text-technical-label text-primary mb-4 border-b border-border-low pb-2 group-hover:border-primary transition-colors">SYS.BACKEND</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li>Node.js / Express</li>
+<li>Python / FastAPI</li>
+<li>PostgreSQL</li>
+<li>Redis</li>
+<li>REST / GraphQL</li>
+</ul>
+</div>
+<!-- AI -->
+<div class="p-6 bg-surface-elevated border border-border-low relative hover-glow transition-all duration-300 group">
+<div class="coord-marker coord-bl"></div>
+<div class="font-technical-label text-technical-label text-primary mb-4 border-b border-border-low pb-2 group-hover:border-primary transition-colors">SYS.AI_OPS</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li>LLM Integration</li>
+<li>RAG Systems</li>
+<li>Prompt Engineering</li>
+<li>Vector Databases</li>
+<li>OpenAI / Anthropic APIs</li>
+</ul>
+</div>
+<!-- Tools -->
+<div class="p-6 bg-surface-elevated border border-border-low relative hover-glow transition-all duration-300 group">
+<div class="coord-marker coord-br"></div>
+<div class="font-technical-label text-technical-label text-primary mb-4 border-b border-border-low pb-2 group-hover:border-primary transition-colors">SYS.TOOLS</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li>Git / GitHub</li>
+<li>Docker</li>
+<li>AWS / Vercel</li>
+<li>CI/CD Pipelines</li>
+<li>Linux / Terminal</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Principles Section -->
+<section class="py-section-gap relative">
+<div class="font-terminal-small text-terminal-small text-primary mb-12">
+<span>[ CORE_PRINCIPLES ]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-[#111113] border border-border-low relative hover-glow transition-all duration-300">
+<div class="text-primary font-display-lg text-headline-md opacity-20 mb-4">01</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">Build for the real problem.</h3>
+</div>
+<div class="p-8 bg-[#111113] border border-border-low relative hover-glow transition-all duration-300">
+<div class="text-primary font-display-lg text-headline-md opacity-20 mb-4">02</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">Keep systems clear and maintainable.</h3>
+</div>
+<div class="p-8 bg-[#111113] border border-border-low relative hover-glow transition-all duration-300">
+<div class="text-primary font-display-lg text-headline-md opacity-20 mb-4">03</div>
+<h3 class="font-headline-md text-headline-md text-text-primary">Use AI with judgment, not as a substitute for it.</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-dim border-t border-border-low">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-full mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<a class="font-display-lg text-headline-md font-bold text-primary" href="#">S.</a>
+<span class="font-body-md text-body-md text-on-surface-variant">2024 Designed and built by Stone</span>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-6">
+<!-- Ghost Button CTA -->
+<a class="relative inline-flex flex-col items-center group" href="#">
+<span class="font-terminal-small text-terminal-small text-on-surface-variant mb-1 group-hover:text-primary transition-colors">[VIEW]</span>
+<button class="px-6 py-3 border border-primary text-primary bg-transparent group-hover:bg-primary/10 transition-colors font-technical-label text-technical-label flex items-center gap-2">
+                        View Projects
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</a>
+<!-- Solid Button CTA -->
+<a class="relative inline-flex flex-col items-center group" href="#">
+<span class="font-terminal-small text-terminal-small text-on-surface-variant mb-1 group-hover:text-primary transition-colors">[INITIATE]</span>
+<button class="px-6 py-3 bg-primary text-[#0A0A0B] hover:shadow-[0_0_15px_rgba(45,212,191,0.6)] transition-all duration-300 font-technical-label text-technical-label flex items-center gap-2">
+                        Contact Me
+                        <span class="material-symbols-outlined text-sm">mail</span>
+</button>
+</a>
+</div>
+<div class="flex gap-4">
+<a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">> Home</a>
+<a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">> Projects</a>
+<a class="font-terminal-small text-terminal-small text-primary opacity-80 hover:opacity-100" href="#">> About</a>
+<a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">> Contact</a>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script>
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.height = scrolled + '%';
+        });
+    </script>
+</body></html>

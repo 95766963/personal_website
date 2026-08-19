@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>S. - Selected Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1b1c",
+                        "on-secondary": "#002e6a",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-dim": "#131314",
+                        "inverse-surface": "#e5e2e3",
+                        "on-secondary-container": "#e6ecff",
+                        "surface-container": "#201f20",
+                        "surface-bright": "#3a393a",
+                        "on-tertiary-fixed-variant": "#6b3b00",
+                        "on-background": "#e5e2e3",
+                        "text-secondary": "#A1A1AA",
+                        "on-tertiary-container": "#744000",
+                        "on-tertiary": "#4b2800",
+                        "surface": "#131314",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-elevated": "#111113",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-variant": "#353436",
+                        "primary-fixed-dim": "#3cddc7",
+                        "border-low": "#1E1E21",
+                        "tertiary": "#ffd1aa",
+                        "on-primary-fixed": "#00201c",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#62fae3",
+                        "text-primary": "#F5F5F5",
+                        "primary": "#57f1db",
+                        "on-secondary-fixed": "#001a42",
+                        "tertiary-container": "#ffac5a",
+                        "on-primary-container": "#00574d",
+                        "on-primary-fixed-variant": "#005047",
+                        "background": "#131314",
+                        "surface-tint": "#3cddc7",
+                        "on-primary": "#003731",
+                        "outline-variant": "#3c4a46",
+                        "outline": "#859490",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#adc6ff",
+                        "secondary-container": "#0566d9",
+                        "on-surface-variant": "#bacac5",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed-dim": "#ffb875",
+                        "accent-glow": "rgba(45, 212, 191, 0.15)",
+                        "on-surface": "#e5e2e3",
+                        "inverse-primary": "#006b5f",
+                        "inverse-on-surface": "#313031",
+                        "surface-container-highest": "#353436",
+                        "tertiary-fixed": "#ffdcc0",
+                        "surface-container-high": "#2a2a2b",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0f",
+                        "primary-container": "#2dd4bf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "terminal-small": ["JetBrains Mono"],
+                        "technical-label": ["JetBrains Mono"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "terminal-small": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "technical-label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0B;
+            color: #F5F5F5;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(30, 30, 33, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 30, 33, 0.5) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
+        }
+        .project-card {
+            border: 1px solid #1E1E21;
+        }
+        .project-card:hover .project-image {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        .project-image {
+            filter: grayscale(80%);
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen relative font-body-md text-body-md overflow-x-hidden">
+<!-- Blueprint Background -->
+<div class="fixed inset-0 blueprint-grid z-0 pointer-events-none"></div>
+<!-- Scroll Progress -->
+<div class="fixed top-0 right-0 w-[2px] h-full bg-surface-elevated z-50">
+<div class="w-full bg-primary-container transition-all duration-300 ease-out" id="scroll-progress" style="height: 0%;"></div>
+</div>
+<!-- Top Navigation Area -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border-low transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-full mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary">
+<a class="hover:text-primary-container transition-colors" href="#">S.</a>
+</div>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-gutter items-center">
+<li><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">&gt; Home</a></li>
+<li><a class="font-technical-label text-technical-label text-primary border-b-2 border-primary pb-1" href="#">&gt; Projects</a></li>
+<li><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">&gt; About</a></li>
+<li><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-primary transition-colors duration-300 hover:accent-glow" href="#">&gt; Contact</a></li>
+</ul>
+<!-- Mobile Nav Toggle (Decorative) -->
+<button class="md:hidden text-text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="relative z-10 pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1600px] mx-auto">
+<!-- Header Section -->
+<header class="mb-section-gap max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary mb-6">Selected Projects</h1>
+<p class="font-body-lg text-body-lg text-text-secondary">
+                Selected work across web development and applied AI. A collection of experimental applications, robust systems, and conceptual interfaces.
+            </p>
+</header>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter lg:gap-[40px]">
+<!-- Project 1: Panda -->
+<article class="project-card bg-surface-elevated rounded relative group overflow-hidden glow-hover transition-all duration-500">
+<!-- Coordinate Accents -->
+<div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary-container opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary-container opacity-50 m-2"></div>
+<div class="p-6 border-b border-border-low flex justify-between items-center bg-surface-dim">
+<span class="font-terminal-small text-terminal-small text-text-secondary tracking-widest">SCOPE: AI_AGENT</span>
+<span class="font-terminal-small text-terminal-small text-primary-container">YEAR: 2024</span>
+</div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Panda Interface" class="w-full h-full object-cover project-image" data-alt="A highly technical dashboard interface for an AI agent named Panda, showing complex data streams, glowing neon green data points, and futuristic graph visualizations on a deep black background. The UI is clean, minimalist, and heavily reliant on monospaced typography, resembling an advanced operating system terminal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGjuQkaonS50AiCcFxurb9w50o1Pm-7S5FnFN8qirVSh0rZ54ZpQTB5j5b1zM95ZCBYQWFP6_6UMKIw6DfP9hgWVUX7hzvjZqSonOzzo_VYMTVmb7FD6SaUbSD3c6yp-QHn6kjQGbzCjqdjiZ83hZiNYaPp1pGJYt4pI-W4QzWmVtpa562Bb5Ej8f5YFUJE8oYvkzGeLCy0qtH06Ddqe2yvE4DJDFlPePBoxaAK3W7MhcatcAPhj6j"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated to-transparent opacity-60"></div>
+</div>
+<div class="p-6 md:p-8">
+<h2 class="font-headline-md text-headline-md text-text-primary mb-4">Panda</h2>
+<p class="font-body-md text-body-md text-text-secondary mb-6">
+                        An autonomous data-processing agent capable of navigating complex datasets and executing multi-step analytical workflows.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">Python</span>
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">LLMs</span>
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">React</span>
+</div>
+<a class="inline-flex items-center gap-2 font-technical-label text-technical-label text-primary-container hover:text-primary transition-colors group" href="#">
+                        View Project
+                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project 2: PC Troubleshooting RAG -->
+<article class="project-card bg-surface-elevated rounded relative group overflow-hidden glow-hover transition-all duration-500">
+<!-- Coordinate Accents -->
+<div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary-container opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary-container opacity-50 m-2"></div>
+<div class="p-6 border-b border-border-low flex justify-between items-center bg-surface-dim">
+<span class="font-terminal-small text-terminal-small text-text-secondary tracking-widest">SCOPE: RAG_SYSTEM</span>
+<span class="font-terminal-small text-terminal-small text-primary-container">YEAR: 2023</span>
+</div>
+<div class="h-64 overflow-hidden relative">
+<img alt="RAG System Visualization" class="w-full h-full object-cover project-image" data-alt="A stylized visualization of a vector database network intersecting with computer hardware components. Deep space dark background with vibrant teal and cyan glowing connection lines representing data retrieval paths. The aesthetic is highly technical, precise, and abstract, focusing on the flow of information in a troubleshooting scenario." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mgEmZO-ZRhe2xsw_F5oxhmbh2KLXJ-Ndr0W1aI9tb-9JkuAtbp9VyKrohH1R6TQYXWvWYPIQY499RRVv8t9VCcoITKsmp1I6Lm7HYm-lbro0IBg23g7l7ASL0hiUVEi6mn0SBqpD_ue9aQOXfcSf2iddbRLrjYAlp5pYH5NEyDB3Q4IqF1S7zqQdtv_Or0NN6X2NQv73Y15S0rTIt6kqCQAR9C8sI9iRTtREXQ5cPSp9zSKzLQEr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated to-transparent opacity-60"></div>
+</div>
+<div class="p-6 md:p-8">
+<h2 class="font-headline-md text-headline-md text-text-primary mb-4">PC Troubleshooting RAG</h2>
+<p class="font-body-md text-body-md text-text-secondary mb-6">
+                        A specialized Retrieval-Augmented Generation system designed to instantly diagnose and resolve complex hardware and software issues based on technical manuals.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">Vector DB</span>
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">LangChain</span>
+<span class="px-3 py-1 bg-surface-container border border-border-low font-terminal-small text-terminal-small text-text-secondary">FastAPI</span>
+</div>
+<a class="inline-flex items-center gap-2 font-technical-label text-technical-label text-primary-container hover:text-primary transition-colors group" href="#">
+                        View Project
+                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project 3: Coming Soon -->
+<article class="project-card bg-surface-elevated rounded relative flex flex-col justify-center items-center p-12 min-h-[500px] border-dashed border-2 border-border-low opacity-60 hover:opacity-100 transition-opacity">
+<div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-text-secondary opacity-30 m-2"></div>
+<div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-text-secondary opacity-30 m-2"></div>
+<span class="material-symbols-outlined text-4xl text-text-secondary mb-4 animate-pulse">code_blocks</span>
+<h2 class="font-headline-md text-headline-md text-text-secondary mb-2">System Initializing...</h2>
+<p class="font-terminal-small text-terminal-small text-text-secondary text-center max-w-xs">
+                    [AWAITING_DEPLOYMENT: NEW_PROJECT_DATA]
+                </p>
+</article>
+</div>
+</main>
+<!-- Footer Area -->
+<footer class="relative z-10 bg-surface-dim border-t border-border-low w-full py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-full mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary mb-6 md:mb-0">
+                S.
+            </div>
+<div class="flex flex-col items-center md:items-end gap-4">
+<ul class="flex flex-wrap justify-center gap-6">
+<li><a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Home</a></li>
+<li><a class="font-terminal-small text-terminal-small text-primary opacity-80 hover:opacity-100" href="#">Projects</a></li>
+<li><a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">About</a></li>
+<li><a class="font-terminal-small text-terminal-small text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a></li>
+</ul>
+<p class="font-body-md text-body-md text-text-secondary opacity-60">
+                    2024 Designed and built by Stone
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', () => {
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = window.scrollY / scrollTotal;
+            document.getElementById('scroll-progress').style.height = `${scrollProgress * 100}%`;
+        });
+    </script>
+</body></html>
